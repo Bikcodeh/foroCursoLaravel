@@ -10,7 +10,7 @@ class CreatePostTest extends FeatureTestCase
 
         //When - Usuario conectado
         $this->actingAs($user = $this->defaultUser())
-            ->visit(route('post.create'))
+            ->visit(route('posts.create'))
             ->type($title, 'title')
             ->type($content, 'content')
             ->press('Publicar');
