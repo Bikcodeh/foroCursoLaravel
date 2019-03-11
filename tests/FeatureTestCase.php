@@ -12,8 +12,7 @@ class FeatureTestCase extends TestCase
         {
             foreach ((array) $errors as $message) {
                 $this->seeInElement(
-                    "field_{$name} .has-error .help-block",
-                    $message
+                    "#field_{$name}.has-error .help-block",$message
                 );
             }
         }
