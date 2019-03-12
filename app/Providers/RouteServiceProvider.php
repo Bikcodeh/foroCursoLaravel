@@ -35,15 +35,15 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
+        //El orden de las rutas importa demasiado
+    
         $this->mapApiRoutes();
-
-        $this->mapPublicRoutes();
 
         $this->mapAuthRoutes();
 
         $this->mapGuestRoutes();
 
-        //
+        $this->mapPublicRoutes();
     }
 
     protected function mapPublicRoutes()
