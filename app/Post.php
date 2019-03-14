@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -12,5 +13,12 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function setTittleAttribute($value)
+    {
+        $this->attributes['title'] = $value;
+
+        $this->attributes['slug'] = Str::slug($value);
     }
 }
