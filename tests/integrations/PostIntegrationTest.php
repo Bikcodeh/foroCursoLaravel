@@ -19,7 +19,7 @@ class PostIntegrationTest extends TestCase
 
         $post->setTittleAttribute($post->title);
 
-        //$user->posts()->save($post);
+        $user->posts()->save($post);
 
         //$post->save();
 

@@ -20,6 +20,7 @@ class CreatePostController extends Controller
         ]);
 
         $post = new Post($request->all());
+        $post->setTittleAttribute($post->title);
 
         auth()->user()->posts()->save($post);
 
