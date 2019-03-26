@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->nullable(true);
             $table->mediumText('content');
             $table->boolean('pending')->default(true);
 

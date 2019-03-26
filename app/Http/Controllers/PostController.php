@@ -7,6 +7,14 @@ use App\Post;
 
 class PostController extends Controller
 {
+    public function index()
+    {
+        $posts = Post::all();
+
+        //dd($posts->url);
+        return view('posts.index', compact('posts'));
+    }
+
     public function show(Post $post, $slug)
     {
         //abort_if($post->slug != $slug, 404);

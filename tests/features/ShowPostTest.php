@@ -1,10 +1,6 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-
-class ShowPostTest extends TestCase
+class ShowPostTest extends FeatureTestCase
 {
     public function test_a_user_can_see_the_post_details()
     {
@@ -14,13 +10,18 @@ class ShowPostTest extends TestCase
             'name' => 'Victor Hoyos'
         ]);
 
-        $post = factory(\App\Post::class)->make([
+        dd($user);
+
+        $post = $this->createPost([
             'title' => 'Este es el titulo del post',
             'content' => 'Este es el contenido del post',
-            'slug' => 'este-es-el-titulo-del-post'
+            'slug' => 'este-es-el-titulo-del-post',
+            'user_id' => $user->id
         ]);
 
-        $user->posts()->save($post);
+        //Como en la linea 17, yo directamente le mando al usuario, entonces esta linea
+        //Ya no es necesaria
+        //$user->posts()->save($post);
 
         // When
         //$this->visit(route('posts.show', [$post->id, $post->slug]))
@@ -36,7 +37,7 @@ class ShowPostTest extends TestCase
         // Having
         $user = $this->defaultUser();
 
-        $post = factory(\App\Post::class)->make([
+        $post = factory(\App\Post::class)->create([
             'title' => 'Old title',
         ]);
 
