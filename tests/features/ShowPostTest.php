@@ -10,8 +10,6 @@ class ShowPostTest extends FeatureTestCase
             'name' => 'Victor Hoyos'
         ]);
 
-        dd($user);
-
         $post = $this->createPost([
             'title' => 'Este es el titulo del post',
             'content' => 'Este es el contenido del post',
