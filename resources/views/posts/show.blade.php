@@ -10,7 +10,7 @@
 
     <h4>Comentarios</h4>
 
-    {!! Form::open(['route' => 'comments.store', 'method' => 'POST']) !!}
+    {!! Form::open(['route' => [ 'comments.store', $post ], 'method' => 'POST']) !!}
 
         {!! Field::textarea('comment') !!}
 

@@ -17,7 +17,7 @@ class WriteCommentTest extends FeatureTestCase
             ->type('Un comentario', 'comment')
             ->press('Publicar comentario');
 
-        $this->seeInDatabase('comments'. [
+        $this->seeInDatabase('comments', [
             'comment' => 'Un comentario',
             'user_id' => $user->id,
             'post_id' => $post->id,
