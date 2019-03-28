@@ -4,7 +4,9 @@
 
     <h1> {{ $post->title }} </h1>
 
-    <p> {{ $post->content }} </p>
+    {!! $post->safe_html_content !!}
+
+    {!! Markdown::convertToHtml(e($post->content)) !!}
 
     <p>{{ $post->user->name }} </p>
 
@@ -23,6 +25,8 @@
     @foreach ($post->latestComments as $comment)
 
     <article class="{{ $comment->answer ? 'answer' : '' }}">
+
+        {{-- TODO: support markdown in the comments as well! --}}
         {{ $comment->comment }}
 
         <!--- Si el usuario que esta conectado puede aceptar ese comentario-->
