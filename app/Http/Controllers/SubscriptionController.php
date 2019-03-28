@@ -12,4 +12,14 @@ class SubscriptionController extends Controller
 
         return redirect($post->url);
     }
+
+    public function unsubscribe(Post $post)
+    {
+        //Para desvincular
+        //auth()->user()->subscriptions()->detach($post);
+        //Refactorizando
+        auth()->user()->unsubscribeFrom($post);
+
+        return redirect($post->url);
+    }
 }

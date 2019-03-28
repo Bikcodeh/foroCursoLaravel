@@ -27,4 +27,32 @@ class SubscribePostTest extends FeatureTestCase
             ->dontSee('Suscribirse al post');
 
     }
+
+    public function test_a_user_can_unsubscribe_from_a_post()
+    {
+        //Having
+        $post = $this->createPost();
+        $post->setTittleAttribute($post->title);
+        $post->save();
+
+        $user = factory(\App\User::class)->create();
+
+        $this->actingAs($user);
+
+        $user->subscribeTo($post);
+
+        //When
+        $this->visit($post->url)
+            ->dontSee('Suscribirse al post')
+            ->press('Desuscribirse del post');
+
+        $this->dontSeeInDatabase('subscriptions', [
+            'user_id' => $user->id,
+            'post_id' => $post->id
+        ]);
+
+        $this->seePageIs($post->url)
+            ->see('Suscribirse al post');
+            
+    }
 }
