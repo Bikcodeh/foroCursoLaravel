@@ -14,6 +14,7 @@ class CommentPolicy
     {
         //return $user->id === $comment->post->user->id;
         //Refactorizando
+        //Si el usuario es el duenio del post
         return $user->owns($comment->post);
     }
 }

@@ -24,11 +24,15 @@
 
     <article class="{{ $comment->answer ? 'answer' : '' }}">
         {{ $comment->comment }}
+
+        <!--- Si el usuario que esta conectado puede aceptar ese comentario-->
+       @if(Gate::allows('accept', $comment) && !$comment->answer)
         {!! Form::open(['route' => ['comments.accept', $comment], 'method' => 'POST']) !!}
             <button type="submit">
                 Aceptar respuesta
             </button>
         {!! Form::close() !!}
+        @endif
     </article>
         
     @endforeach
