@@ -13,11 +13,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Post::class, function(\Faker\Generator $faker){
-    
+    static $title = '';
     return [
-        'title' => $faker->sentence,
+        'title' => $title = $faker->sentence,
         'content' => $faker->paragraph,
-        'pending' => $faker->boolean(),
+        'slug' => $title,
+        'pending' => true,
         'user_id' => function () {
             return factory(\App\User::class)->create()->id;
         },
