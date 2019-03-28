@@ -54,4 +54,23 @@ class User extends Authenticatable
         return $this->id === $model->user_id;
     }
 
+    public function subscriptions()
+    {
+        //Al colocar el argumento subscriptions, es como darle una especie
+        //de alias a la tabla o decirle a que tabla vaya, ya que como es una relacion de muchos a muchos
+        //la tabla esperada vendria siendo post_user, entonces, es como si a la tabla
+        //pibote (post_user) la hubiera renombrado 'subscriptions'
+        return $this->belongsToMany(Post::class, 'subscriptions');
+    }
+
+    public function isSubscribedTo(Post $post)
+    {
+        return $this->subscriptions()->where('post_id', $post->id)->count() > 0;
+    }
+
+    public function subscribeTo(Post $post)
+    {
+        return $this->subscriptions()->attach($post);
+    }
+
 }
