@@ -74,6 +74,11 @@ class User extends Authenticatable
         return $this->belongsToMany(Post::class, 'subscriptions');
     }
 
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
     public function isSubscribedTo(Post $post)
     {
         return $this->subscriptions()->where('post_id', $post->id)->count() > 0;
