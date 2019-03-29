@@ -1,9 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Notification;
+
 class WriteCommentTest extends FeatureTestCase
 {
     public function test_a_user_write_a_comment()
     {
+        Notification::fake();
+
         $post = factory(\App\Post::class)->create();
         $post->setTittleAttribute($post->title);
         

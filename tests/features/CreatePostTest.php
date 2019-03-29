@@ -27,7 +27,8 @@ class CreatePostTest extends FeatureTestCase
            
         ]);
 
-        $post = Post::first();
+        $post = Post::where('title', $title)->first();
+
         $post->setTittleAttribute($post->title);
         $post->save();
 
