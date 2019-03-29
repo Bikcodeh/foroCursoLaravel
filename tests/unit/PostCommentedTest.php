@@ -14,7 +14,8 @@ class PostCommentedTest extends TestCase
     {
 
         $user = new User([
-            'name' => 'Victor Hoyos'
+            'first_name' => 'Victor',
+            'last_name' => 'Hoyos',
         ]);
 
         $user->setId(2);

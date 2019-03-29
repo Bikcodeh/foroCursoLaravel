@@ -40,7 +40,7 @@ class PostCommented extends Notification
     {
         return (new MailMessage)
                     ->subject('Nuevo comentario en: ' .$this->comment->post->title)
-                    ->line($this->comment->user->name.' escribio un comentario en: '.$this->comment->post->title)
+                    ->line($this->comment->user->first_name. " ".$this->comment->user->last_name.' escribio un comentario en: '.$this->comment->post->title)
                     ->action('Ver post', $this->comment->post->url);
     }
 
