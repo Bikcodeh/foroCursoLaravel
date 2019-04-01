@@ -46,7 +46,7 @@ class CreatePostTest extends FeatureTestCase
     {
         //Test a user is redirect to the post details after creating it.
         $this->visit(route('posts.create'))
-            ->seePageIs(route('login'));
+            ->seePageIs(route('token'));
     }
 
     function test_create_post_form_validation()
