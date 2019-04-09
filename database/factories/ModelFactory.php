@@ -13,10 +13,10 @@
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
+        'email' => $faker->unique()->safeEmail,
+        'username' => $faker->unique()->userName,
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
-        'username' => $faker->unique()->userName,
-        'email' => $faker->unique()->safeEmail,
         'remember_token' => str_random(10),
     ];
 });
