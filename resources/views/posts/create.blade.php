@@ -5,7 +5,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
+<<<<<<< HEAD
                     <div class="panel-heading">Register</div>
+=======
+                    <h1>Register</h1>
+>>>>>>> lesson36Try
                     <div class="panel-body">
                         {!! Form::open(['method' => 'POST', 'route' => 'posts.store']) !!}
 
@@ -13,6 +17,11 @@
 
                             {!! Field::textarea('content') !!}
 
+<<<<<<< HEAD
+=======
+                            {!! Field::select('category_id', $categories) !!}
+
+>>>>>>> lesson36Try
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">

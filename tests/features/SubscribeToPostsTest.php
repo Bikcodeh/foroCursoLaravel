@@ -27,7 +27,7 @@ class SubscribeToPostsTest extends FeatureTestCase
             ->dontSee('Suscribirse al post');
     }
 
-    function test_a_user_can_unsubscribe_from_a_post()
+    /*function test_a_user_can_unsubscribe_from_a_post()
     {
         // Having
         $post = $this->createPost();
@@ -49,5 +49,5 @@ class SubscribeToPostsTest extends FeatureTestCase
         ]);
 
         $this->seePageIs($post->url);
-    }
+    }*/
 }

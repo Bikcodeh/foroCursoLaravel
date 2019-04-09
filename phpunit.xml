@@ -9,8 +9,14 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
+<<<<<<< HEAD
         <testsuite name="Application Test Suite">
             <directory suffix="Test.php">./tests</directory>
+=======
+        <testsuite name="App">
+            <directory suffix="Test.php">./tests</directory>
+             <exclude>./tests/Browser</exclude>
+>>>>>>> lesson36Try
         </testsuite>
     </testsuites>
     <filter>

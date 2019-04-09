@@ -22,3 +22,9 @@ Route::get('posts/{post}-{slug}', [
     'as' => 'posts.show',
     'uses' => 'PostController@show'
 ])->where('post', '\d+');
+
+Route::post('posts/create', [
+    'uses' => 'CreatePostController@store',
+    'as' => 'posts.store',
+]);
+
