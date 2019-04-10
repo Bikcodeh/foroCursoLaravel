@@ -62,21 +62,12 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-<<<<<<< HEAD
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
-=======
                     "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
->>>>>>> lesson36Try
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -113,27 +104,6 @@
                 "singularize",
                 "string"
             ],
-<<<<<<< HEAD
-            "time": "2015-11-06 14:35:42"
-        },
-        {
-            "name": "erusev/parsedown",
-            "version": "1.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/erusev/parsedown.git",
-                "reference": "20ff8bbb57205368b4b42d094642a3e52dac85fb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/20ff8bbb57205368b4b42d094642a3e52dac85fb",
-                "reference": "20ff8bbb57205368b4b42d094642a3e52dac85fb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-=======
             "time": "2018-01-09T20:05:19+00:00"
         },
         {
@@ -157,7 +127,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^4.8.35"
             },
->>>>>>> lesson36Try
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -181,9 +150,6 @@
                 "markdown",
                 "parser"
             ],
-<<<<<<< HEAD
-            "time": "2016-11-02 15:56:58"
-=======
             "time": "2019-03-17T18:48:37+00:00"
         },
         {
@@ -245,7 +211,6 @@
                 "webdriver"
             ],
             "time": "2018-05-16T17:37:13+00:00"
->>>>>>> lesson36Try
         },
         {
             "name": "graham-campbell/markdown",
@@ -307,32 +272,6 @@
                 "laravel",
                 "markdown"
             ],
-<<<<<<< HEAD
-            "time": "2017-01-01 13:30:44"
-        },
-        {
-            "name": "jakub-onderka/php-console-color",
-            "version": "0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JakubOnderka/PHP-Console-Color.git",
-                "reference": "e0b393dacf7703fc36a4efc3df1435485197e6c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/e0b393dacf7703fc36a4efc3df1435485197e6c1",
-                "reference": "e0b393dacf7703fc36a4efc3df1435485197e6c1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "jakub-onderka/php-code-style": "1.0",
-                "jakub-onderka/php-parallel-lint": "0.*",
-                "jakub-onderka/php-var-dump-check": "0.*",
-                "phpunit/phpunit": "3.7.*",
-=======
             "time": "2017-01-01T13:30:44+00:00"
         },
         {
@@ -357,18 +296,12 @@
                 "jakub-onderka/php-parallel-lint": "1.0",
                 "jakub-onderka/php-var-dump-check": "0.*",
                 "phpunit/phpunit": "~4.3",
->>>>>>> lesson36Try
                 "squizlabs/php_codesniffer": "1.*"
             },
             "type": "library",
             "autoload": {
-<<<<<<< HEAD
-                "psr-0": {
-                    "JakubOnderka\\PhpConsoleColor": "src/"
-=======
                 "psr-4": {
                     "JakubOnderka\\PhpConsoleColor\\": "src/"
->>>>>>> lesson36Try
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -378,35 +311,6 @@
             "authors": [
                 {
                     "name": "Jakub Onderka",
-<<<<<<< HEAD
-                    "email": "jakub.onderka@gmail.com",
-                    "homepage": "http://www.acci.cz"
-                }
-            ],
-            "time": "2014-04-08 15:00:19"
-        },
-        {
-            "name": "jakub-onderka/php-console-highlighter",
-            "version": "v0.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JakubOnderka/PHP-Console-Highlighter.git",
-                "reference": "7daa75df45242c8d5b75a22c00a201e7954e4fb5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Highlighter/zipball/7daa75df45242c8d5b75a22c00a201e7954e4fb5",
-                "reference": "7daa75df45242c8d5b75a22c00a201e7954e4fb5",
-                "shasum": ""
-            },
-            "require": {
-                "jakub-onderka/php-console-color": "~0.1",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "jakub-onderka/php-code-style": "~1.0",
-                "jakub-onderka/php-parallel-lint": "~0.5",
-=======
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
@@ -434,20 +338,14 @@
             "require-dev": {
                 "jakub-onderka/php-code-style": "~1.0",
                 "jakub-onderka/php-parallel-lint": "~1.0",
->>>>>>> lesson36Try
                 "jakub-onderka/php-var-dump-check": "~0.1",
                 "phpunit/phpunit": "~4.0",
                 "squizlabs/php_codesniffer": "~1.5"
             },
             "type": "library",
             "autoload": {
-<<<<<<< HEAD
-                "psr-0": {
-                    "JakubOnderka\\PhpConsoleHighlighter": "src/"
-=======
                 "psr-4": {
                     "JakubOnderka\\PhpConsoleHighlighter\\": "src/"
->>>>>>> lesson36Try
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -461,12 +359,8 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2015-04-20 18:58:01"
-=======
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
->>>>>>> lesson36Try
         },
         {
             "name": "laravel/browser-kit-testing",
@@ -513,26 +407,6 @@
                 "laravel",
                 "testing"
             ],
-<<<<<<< HEAD
-            "time": "2017-02-08 22:32:37"
-        },
-        {
-            "name": "laravel/framework",
-            "version": "v5.4.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
-                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/inflector": "~1.0",
-=======
             "time": "2017-02-08T22:32:37+00:00"
         },
         {
@@ -608,7 +482,6 @@
             },
             "require": {
                 "doctrine/inflector": "~1.1",
->>>>>>> lesson36Try
                 "erusev/parsedown": "~1.6",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
@@ -720,22 +593,6 @@
                 "framework",
                 "laravel"
             ],
-<<<<<<< HEAD
-            "time": "2017-02-15 14:31:32"
-        },
-        {
-            "name": "laravel/tinker",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/tinker.git",
-                "reference": "3d5b675b55b24ccbf86395964042dbe061d5a965"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/tinker/zipball/3d5b675b55b24ccbf86395964042dbe061d5a965",
-                "reference": "3d5b675b55b24ccbf86395964042dbe061d5a965",
-=======
             "time": "2017-08-30T09:26:16+00:00"
         },
         {
@@ -750,7 +607,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/tinker/zipball/cafbf598a90acde68985660e79b2b03c5609a405",
                 "reference": "cafbf598a90acde68985660e79b2b03c5609a405",
->>>>>>> lesson36Try
                 "shasum": ""
             },
             "require": {
@@ -758,13 +614,8 @@
                 "illuminate/contracts": "~5.1",
                 "illuminate/support": "~5.1",
                 "php": ">=5.5.9",
-<<<<<<< HEAD
-                "psy/psysh": "0.7.*|0.8.*",
-                "symfony/var-dumper": "~3.0"
-=======
                 "psy/psysh": "0.7.*|0.8.*|0.9.*",
                 "symfony/var-dumper": "~3.0|~4.0"
->>>>>>> lesson36Try
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0|~5.0"
@@ -776,14 +627,11 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0-dev"
-<<<<<<< HEAD
-=======
                 },
                 "laravel": {
                     "providers": [
                         "Laravel\\Tinker\\TinkerServiceProvider"
                     ]
->>>>>>> lesson36Try
                 }
             },
             "autoload": {
@@ -808,22 +656,6 @@
                 "laravel",
                 "psysh"
             ],
-<<<<<<< HEAD
-            "time": "2016-12-30 18:13:17"
-        },
-        {
-            "name": "laravelcollective/html",
-            "version": "v5.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "7570f25d58a00fd6909c0563808590f9cdb14d47"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/7570f25d58a00fd6909c0563808590f9cdb14d47",
-                "reference": "7570f25d58a00fd6909c0563808590f9cdb14d47",
-=======
             "time": "2018-10-12T19:39:35+00:00"
         },
         {
@@ -838,7 +670,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/LaravelCollective/html/zipball/f04965dc688254f4c77f684ab0b42264f9eb9634",
                 "reference": "f04965dc688254f4c77f684ab0b42264f9eb9634",
->>>>>>> lesson36Try
                 "shasum": ""
             },
             "require": {
