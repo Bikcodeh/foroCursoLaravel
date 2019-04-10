@@ -31,7 +31,7 @@ class CreatePostsTest extends FeatureTestCase
 
         ]);
 
-        $post = Post::first();
+        $post = Post::where('title', '=', $title)->first();
 
         // Test the author is suscribed automatically to the post.
         $this->seeInDatabase('subscriptions', [

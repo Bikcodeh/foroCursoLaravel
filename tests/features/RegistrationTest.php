@@ -24,7 +24,7 @@ class RegistrationTest extends FeatureTestCase
             'last_name' => 'Palacios',
         ]);
 
-        $user = User::first();
+        $user = User::where('username', '=', 'silence')->firstOrFail();
 
         $this->seeInDatabase('tokens', [
             'user_id' => $user->id
